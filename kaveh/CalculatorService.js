@@ -1,20 +1,28 @@
 ﻿// Code goes here
 /*
-support decimal results
-support negative results
-support continuous math operations
-handle divide by zero
-handle duplicate operand entering 
-*/
+ support decimal results
+ support negative results
+ support continuous math operations
+ handle divide by zero
+ handle duplicate operand entering
+ */
 'use strict';
 
 function CalculatorService() {
     var number = "0";
     var operandConvertor = {
-        '+': function (x, y) { return x + y },
-        '-': function (x, y) { return x - y },
-        '/': function (x, y) { return x / y },
-        '*': function (x, y) { return x * y }
+        '+': function (x, y) {
+            return x + y
+        },
+        '-': function (x, y) {
+            return x - y
+        },
+        '/': function (x, y) {
+            return x / y
+        },
+        '*': function (x, y) {
+            return x * y
+        }
     };
     var digits = {
         zero: 0,
@@ -79,9 +87,8 @@ function CalculatorService() {
             operand = number.replace(/[0-9.]/g, '')
             arr = number.split(operand);
         }
-        return { operand: operand, arr: arr };
+        return {operand: operand, arr: arr};
     }
 
-   
 
 }
